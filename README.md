@@ -1,5 +1,5 @@
 # ConvoJs
-## A jQuery Conversational UI Plugin. [Checkout the Demo](https://convojs.firebaseapp.com/)
+## jQuery Conversational UI Plugin. [Checkout the Demo](https://convojs.firebaseapp.com/)
 
 ## Setup
 
