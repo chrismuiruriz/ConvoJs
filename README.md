@@ -1,7 +1,7 @@
 # ConvoJs
 ## jQuery Conversational UI Plugin. [Checkout the Demo](https://convojs.firebaseapp.com/)
 
-## Setup
+### Setup
 
 #### Add the following code to your HTML page
 
