@@ -47,7 +47,7 @@
 <script src="js/convo.js" type="text/javascript"></script>
 ```
 
-#### Finaly initialize the plugin
+#### Finally initialize the plugin
 
 ```javascript
 $(document).ready(function () {
@@ -72,7 +72,7 @@ $(document).ready(function () {
  });
 ```
 
-## And you'll done, Happy Coding :)
+## And you are done, Happy Coding :)
 
 
 
