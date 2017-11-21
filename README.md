@@ -1,8 +1,7 @@
 # ConvoJs
 ## jQuery Conversational UI Plugin. [Checkout the Demo](https://convojs.firebaseapp.com/)
 
-![ConvoJs](https://convojs.firebaseapp.com/img/convojs.gif=230x)
-<img src="https://convojs.firebaseapp.com/img/convojs.gif" alt="ConvoJs" style="width: 230px;"/>
+<img src="https://convojs.firebaseapp.com/img/convojs.gif" alt="ConvoJs" width="230px"/>
 
 ### Setup
 
