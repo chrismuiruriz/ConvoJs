@@ -1,0 +1,449 @@
+/* 
+    Created on : 08-Nov-2017, 09:41:56
+    Author     : Chris Muiruri @chrismuiruri_
+*/
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
+
+/*
+Elements to update when theming
+.header-tools {
+    border-color
+}
+.cui_option_btn_submit {
+    color
+    background-color
+    border-color
+}
+.logo {
+    src
+}
+.human .cui__bubble {
+    background:
+    color:
+}
+.cui_option {
+    background
+    color
+}
+.background {
+    background
+}
+*/
+
+$bodybackgroundColor:#efded1;
+$secondaryBackgroundColor: #efded1;
+$primaryColor: #fc852e;
+$bodyMaxWidth: 680px;
+$bubbleWrapperMargin: 1em 0 148px 0;
+* {
+    box-sizing: border-box;
+}
+html {
+    body {
+        margin: 0 auto;
+        font-family: 'Didact Gothic', sans-serif;
+        [placeholder]:empty:before {
+            content: attr(placeholder);
+            color: #555; 
+        }
+        [placeholder]:empty:focus:before {
+            content: "";
+        }
+        [contentEditable] {
+            white-space: nowrap;
+        }
+        .top-bar {
+            height: 3px;
+            background-color: $primaryColor;
+        }
+        .header-tools {
+            position: relative;   
+            padding: 6px 0 0 1em;
+            display: block;
+            max-width: 680px;
+            width: 100%;
+            margin: 0 auto;
+            a {
+                text-decoration: none;  
+                display: inline-block;
+                color: #fff;
+                padding: 5px;
+                padding-bottom: 4px;
+                padding-right: 9px;
+                border-bottom-right-radius: 4px;
+                text-decoration: none;
+                position: relative;
+                background-color: transparent;
+                z-index: 9999;
+                left: 0;
+                top: 0;
+                transition: all 0.5s;
+                -webkit-transition: all 0.5s;
+                -moz-transition: all 0.5s;
+                -o-transition: all 0.5s;
+            }
+            img {
+                height: 50px;
+            }
+        }
+        .background {    
+            /* if you want to add a background image, place it here */
+            position: fixed;
+            top:0px;
+            left:0px;
+            width: 100%;
+            height: 100%;
+            z-index: -9;
+            background: #42275a;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #734b6d, #42275a);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #734b6d, #42275a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        }
+        .convo__wrapper {
+            max-width: $bodyMaxWidth;
+            margin: 0 auto;
+            .bubble__wrapper {
+                list-style: none;
+                padding: 0;
+                margin:$bubbleWrapperMargin;
+                li.bot {
+                    position: relative;
+                    padding: 0 1em;
+                    margin: 0;
+                    overflow: hidden;    
+                    text-align: left;
+                    .cui__bubble {
+                        position: relative;
+                        display: inline-block;
+                        font-size: 17px;
+                        text-align: left;
+                        line-height: 1.45em;
+                        margin: 0 0 1em 0;
+                        padding: 6px 12px;
+                        border: 0;
+                        border-radius: 3px;
+                        box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+                        background: #fff;
+                        max-width: 80%;
+                        min-width: 44px;
+                        min-height: 12px;
+                        opacity: 0;
+                        transform: translate(-100%, 100px);
+                        transition: width 0.5s;
+                        -webkit-transition: width 0.5s;
+                        .inner__bubble {
+                            transition: visibility 0.5s;
+                            img {
+                                width: 100%;
+                                max-width: 200px;    
+                            }
+                            a {
+                                text-decoration: none;
+                                color: #ac2024;
+                                font-weight: 500;
+                            }
+                        }
+                    } 
+                }
+                li.human {
+                    position: relative;
+                    padding: 0 1em;
+                    margin: 0;
+                    overflow: hidden;
+                    text-align: right;
+                    .cui__bubble {
+                        background: $primaryColor;
+                        color: #fff;
+                        position: relative;
+                        display: inline-block;
+                        font-size: 17px;
+                        text-align: left;
+                        line-height: 1.45em;
+                        margin: 0 0 1em 0;
+                        padding: 6px 12px;
+                        border: 0;
+                        border-radius: 3px;
+                        box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+                        max-width: 80%;
+                        min-width: 44px;
+                        min-height: 12px;
+                        opacity: 0;
+                        transform: translate(-100%, 100px);
+                        transition: width 0.5s;
+                        -webkit-transition: width 0.5s;
+                        .inner__bubble {
+                            transition: visibility 0.5s;
+                        }
+                    }
+                }
+            }
+        }
+        .cui__response {
+            position: fixed;
+            width: 100%;
+            bottom: 1em;
+            white-space: nowrap;
+            text-align: center;
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding-bottom: 0em;
+            .cui_option {
+                position: relative;
+                background-color: #fff;
+                display: inline-block;
+                cursor: pointer;
+                opacity: 0;
+                transform: translateY(100px);
+                margin-left: 8px;
+                margin-right: 8px;
+                margin: 12px 6px;
+                float: none;   
+                background: $primaryColor;
+                color: #fff;
+                box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+                line-height: 1.45em;
+                border-radius: 3px;
+                position: relative;
+                padding: 6px 12px;
+                font-size: 17px;
+                border: 0;
+                min-width: 44px;
+                min-height: 12px;
+            }
+            .cui_option_input {
+                position: relative;
+                opacity: 0;
+                transform: translateY(100px);
+                width: 200px;
+                padding: 6px 16px;
+                border-radius: 4px;
+                background-color: #fff;
+                cursor: text;
+                display: inline-block;
+                float: none;   
+                overflow-x: hidden;
+                vertical-align: top;
+                text-align: left;
+                &:focus {
+                    box-shadow: none;
+                    outline: 0;
+                    border-color: transparent;
+                }
+            }
+            .cui_option_btn_submit {  
+                position: relative;
+                opacity: 0;
+                transform: translateY(100px);
+                width: auto;
+                padding: 7px 16px;
+                border-radius: 4px;
+                background-color: #fc852e;
+                color: #fff;
+                cursor: pointer;
+                display: inline-block;
+                margin-left: 6px;
+                float: none; 
+                outline: 0;
+                border-color: #fc852e;
+            }
+        }
+        .slide-in {
+            animation: slide-in 0.3s forwards;
+        }
+        .slide-up {
+            animation: slide-up 0.3s forwards;
+        }
+        @keyframes slide-in {
+            100% {
+                transform: translate(0%);
+                opacity: 1;
+            }
+        }
+        @keyframes slide-up {
+            100% {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 280px) and (max-device-width : 768px) {
+
+    html {
+        body {
+            margin: 0 auto;
+            .header-tools {
+                position: relative;
+                display: inline-block;   
+                max-width: 680px;
+                margin: 0 auto;
+                a {
+                    text-decoration: none;  
+                    display: inline-block;
+                    color: #fff;
+                    padding: 5px;
+                    padding-bottom: 4px;
+                    padding-right: 9px;
+                    border-bottom-right-radius: 4px;
+                    text-decoration: none;
+                    position: relative;
+                    background-color: transparent;
+                    z-index: 9999;
+                    left: 0;
+                    top: 0;
+                    transition: all 0.5s;
+                    -webkit-transition: all 0.5s;
+                    -moz-transition: all 0.5s;
+                    -o-transition: all 0.5s;
+                }
+                img {
+                    height: 50px;
+                }
+            }
+            .background {    
+                position: fixed;
+                top:0px;
+                left:0px;
+                width: 100%;
+                height: 100%;
+                background-position: 50%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                z-index: -9;
+            }
+            .convo__wrapper {
+                max-width: $bodyMaxWidth;
+                margin: 0 auto;
+                .bubble__wrapper {
+                    list-style: none;
+                    padding: 0;
+                    margin:$bubbleWrapperMargin;
+                    li.bot {
+                        position: relative;
+                        padding: 0 1em;
+                        margin: 0;
+                        overflow: hidden;    
+                        text-align: left;
+                        .cui__bubble {
+                            position: relative;
+                            display: inline-block;
+                            font-size: 16px;
+                            text-align: left;
+                            line-height: 1.45em;
+                            margin: 0 0 1em 0;
+                            padding: 6px 12px;
+                            border: 0;
+                            border-radius: 3px;
+                            box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+                            background: #fff;
+                            max-width: 100%;
+                            min-width: 44px;
+                            min-height: 12px;
+                            opacity: 0;
+                            transform: translate(-100%, 100px);
+                            transition: width 0.5s;
+                            -webkit-transition: width 0.5s;
+                            .inner__bubble {
+                                transition: visibility 0.5s;
+                                img {
+                                    width: 100%;
+                                    max-width: 200px;    
+                                }
+                            }
+                        } 
+                    }
+                    li.human {
+                        position: relative;
+                        padding: 0 1em;
+                        margin: 0;
+                        overflow: hidden;
+                        text-align: right;
+                        .cui__bubble {
+                            background: $primaryColor;
+                            color: #fff;
+                            position: relative;
+                            display: inline-block;
+                            font-size: 16px;
+                            text-align: left;
+                            line-height: 1.45em;
+                            margin: 0 0 1em 0;
+                            padding: 6px 12px;
+                            border: 0;
+                            border-radius: 3px;
+                            box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+                            max-width: 100%;
+                            min-width: 44px;
+                            min-height: 12px;
+                            opacity: 0;
+                            transform: translate(-100%, 100px);
+                            transition: width 0.5s;
+                            -webkit-transition: width 0.5s;
+                            .inner__bubble {
+                                transition: visibility 0.5s;
+                            }
+                        }
+                    }
+                }
+                .slide-in {
+                    animation: slide-in 0.3s forwards;
+                }
+                .slide-up {
+                    animation: slide-up 0.3s forwards;
+                }
+                @keyframes slide-in {
+                    100% {
+                        transform: translate(0%);
+                        opacity: 1;
+                    }
+                }
+                @keyframes slide-up {
+                    100% {
+                        transform: translateY(0%);
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .cui__response {
+                position: fixed;
+                width: 100%;
+                bottom: 1em;
+                white-space: nowrap;
+                max-width: 100%;
+                text-align: center;
+                max-width: 680px;
+                margin: 0 auto;
+                overflow-x: auto;
+                overflow-y: hidden;
+                padding-bottom: 0em;
+                .cui_option {
+                    position: relative;
+                    background-color: #fff;
+                    display: inline-block;
+                    cursor: pointer;
+                    opacity: 0;
+                    transform: translateY(100px);
+                    margin-left: 8px;
+                    margin-right: 8px;
+                    margin: 12px 6px;
+                    float: none;   
+                    background: $primaryColor;
+                    color: #fff;
+                    box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+                    line-height: 1.45em;
+                    border-radius: 3px;
+                    position: relative;
+                    padding: 6px 12px;
+                    font-size: 16px;
+                    border: 0;
+                    min-width: 44px;
+                    min-height: 12px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+    Created on : 08-Nov-2017, 09:41:56
+    Author     : Chris Muiruri @chrismuiruri_
+-->
+<html>
+    <head>
+        <title>ConvoJs - CUI SITE</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, minimal-ui, initial-scale=1, minimum-scale=1, user-scalable = no">
+        <meta name="description" content="A simple conversational website jQuery plugin" />
+        <meta name="keywords" content="CUI, Conversational, Bot, ConvoJs" />
+        <meta name="author" content="Chris Muiruri" />
+        <link href="css/convo.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div class="top-bar"></div>
+        <div class="header-tools">
+            <a href="javascript:void(0)">
+                <img src="img/logo-md.png" alt="ConvoJs - Conversation UI jQuery Plugin" id="logo"/>
+            </a>
+        </div>
+        <div class="convo__wrapper">
+            <ul class="bubble__wrapper">
+            </ul>
+        </div>
+        <div class="cui__response">
+        </div>
+        <div class="background">&nbsp;</div>
+
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script src="js/data.js" type="text/javascript"></script>
+        <script src="js/convo.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+
+                //include the js
+                $(".bubble__wrapper").convo({
+                    headerTopColor: "#f00",
+                    logo: "img/logo-md.png",
+                    pageColor: "linear-gradient(to right, #83a4d4, #b6fbff)",
+                    data: chatz,
+                    inputCharLimit: 50
+                });
+
+                //update for response input
+                $("[contenteditable]").focusout(function () {
+                    var element = $(this);
+                    if (!element.text().trim().length) {
+                        element.empty();
+                    }
+                });
+
+            });
+        </script>
+    </body>
+</html>
