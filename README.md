@@ -1,8 +1,10 @@
 # ConvoJs
 A simple conversational jQuery plugin
 
-##Setup
-###HTML 
+## Setup
+
+### HTML
+
 
 ```html
 <div class="top-bar"></div>
