@@ -1,5 +1,5 @@
 # ConvoJs
-##A simple conversational jQuery plugin [Demo](https://bootstrapstudio.io/)
+## A simple conversational jQuery plugin [Demo](https://bootstrapstudio.io/)
 
 ## Setup
 
@@ -70,7 +70,13 @@ $(document).ready(function () {
  });
 ```
 
-## And you'll done
+## And you'll done, Happy Coding :)
+
+
+
+
+
+
 
 
 
