@@ -3,7 +3,7 @@ A simple conversational jQuery plugin
 
 ## Setup
 
-### HTML
+#### Add the following code to your HTML page
 
 
 ```html
@@ -20,5 +20,59 @@ A simple conversational jQuery plugin
  <div class="cui__response"></div>
  <div class="background">&nbsp;</div>
 ```
+
+#### Include convo.css file in your the head tag
+
+```html
+<link href="css/convo.css" rel="stylesheet" type="text/css" />
+```
+
+#### Don't forget to include jQuery
+
+```html
+<script src="js/jquery.js" type="text/javascript"></script>
+```
+
+#### Add data.js file, this is where the conversation is stored
+
+```html
+<script src="js/data.js" type="text/javascript"></script>
+```
+
+#### Add the convojs plugin file
+
+```html
+<script src="js/convo.js" type="text/javascript"></script>
+```
+
+#### and finaly initialize the plugin
+
+```javascript
+$(document).ready(function () {
+
+     //include the js
+     $(".bubble__wrapper").convo({
+         headerTopColor: "#f00",
+         logo: "img/logo-md.png",
+         pageColor: "linear-gradient(to right, #83a4d4, #b6fbff)",
+         data: chatz,
+         inputCharLimit: 50
+     });
+
+     //we need this for contentEditable placeholder
+     $("[contenteditable]").focusout(function () {
+         var element = $(this);
+         if (!element.text().trim().length) {
+             element.empty();
+         }
+     });
+
+ });
+```
+
+## And you'll done
+
+
+
 
 
