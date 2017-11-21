@@ -21,7 +21,7 @@
  <div class="background">&nbsp;</div>
 ```
 
-#### Include convo.css file in your the head tag
+#### Include convo.css file in your head tag
 
 ```html
 <link href="css/convo.css" rel="stylesheet" type="text/css" />
