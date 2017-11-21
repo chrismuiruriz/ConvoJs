@@ -1,5 +1,5 @@
 # ConvoJs
-## A simple conversational jQuery plugin [Demo](https://convojs.firebaseapp.com/)
+## A conversational UI jQuery plugin [Demo](https://convojs.firebaseapp.com/)
 
 ## Setup
 
