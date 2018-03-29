@@ -41,7 +41,9 @@
 <script src="js/data.js" type="text/javascript"></script>
 ```
 
-#### use this structure to add your data
+#### Use this structure to add your data, the path 'intro' is mandatory since it's the nitial path when the page loads.
+#### Each item contains a path, messages and choices
+#### The 'path' is the unique identifier of that item
 
 ```javascript
 var chatz = [{
